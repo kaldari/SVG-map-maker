@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg
-
  xmlns:dc="http://purl.org/dc/elements/1.1/"
  xmlns:cc="http://creativecommons.org/ns#"
  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -383,5 +382,4 @@
    style="fill: none; fill-rule: evenodd; stroke: rgb(169, 169, 169); stroke-width: 1.67247; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
    d="M 785.20657,594.15916 C 826.08861,544.82808 826.52044,544.307 826.52044,544.307 L 959.72903,544.307 L 959.72903,546.22006"
    id="path3321" />
-
 </svg>
