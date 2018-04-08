@@ -1,0 +1,7 @@
+Credits:
+
+* SVG Map Maker created by Ryan Kaldari. See https://github.com/kaldari/SVG-map-maker.
+* Blank USA states only.svg created by Theshibboleth (CC-BY-SA 3.0)
+* Blank USA w territories.svg created by Lokal_Profil (CC-BY-SA 3.0)
+* jscolor created by Jan Odvarko (GPLv3). See http://jscolor.com/.
+* jQuery created by jQuery authors (MIT). See https://github.com/jquery/jquery.
