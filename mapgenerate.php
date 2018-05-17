@@ -3,7 +3,11 @@ error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
 
 // Generate new map data
-$map = file_get_contents( "Blank USA states only.svg" );
+if ( $_POST["territories"] ) {
+	$map = file_get_contents( "Blank USA w territories.svg" );
+} else {
+	$map = file_get_contents( "Blank USA states only.svg" );
+}
 if ( $map ) {
 	foreach( $_POST["states"] as $state => $fill ) {
 		$map = str_replace( 'id="' . $state . '" fill="#D3D3D3"', 'id="' . $state . '" fill="#' . strtoupper( $fill ) . '"', $map );
