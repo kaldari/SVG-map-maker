@@ -10,14 +10,17 @@
 		body {
 			font-family: Arial, sans-serif;
 			font-size: 16px;
-			margin: 8px;
+			margin: 20px;
 		}
-		form {
+		form, figure {
 			margin: 0;
 			padding: 0;
 		}
 		div.columns {
 			position: relative;
+			width: 1160px;
+			text-align: left;
+			margin: 0 auto;
 		}
 		div#left {
 			width: 186px;
@@ -57,7 +60,7 @@
 </head>
 <body>
 <form action="mapgenerate.php" method="POST" style="text-align: center;">
-<div class="columns" style="width:1200px; text-align: left; margin: 0 auto;">
+<div class="columns"">
 <div class="column" id="left">
 	<input type="checkbox" id="territories" onclick="toggleTerritories();" name="territories"/> Include territories<br/>
 	<p>
