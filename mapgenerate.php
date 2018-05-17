@@ -3,7 +3,7 @@ error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
 
 // Generate new map data
-if ( $_POST["territories"] ) {
+if ( isset( $_POST["territories"] ) && $_POST["territories"] ) {
 	$map = file_get_contents( "Blank USA w territories.svg" );
 } else {
 	$map = file_get_contents( "Blank USA states only.svg" );
