@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Map Maker</title>
-	<meta name="generator" content="BBEdit 11.1" />
+	<meta charset="utf-8" />
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jscolor.js"></script>
 	<script src="js/mapcontroller.js"></script>
@@ -10,11 +10,27 @@
 		body {
 			font-family: Arial, sans-serif;
 			font-size: 16px;
-			margin: 20px;
+			margin: 0 20px 20px 20px;
 		}
 		form, figure {
 			margin: 0;
 			padding: 0;
+		}
+		div.header {
+			width: 1160px;
+			margin: 0 auto 20px auto;
+			padding: 10px 20px;
+			background-color: #e5f5ff;
+		}
+		.tool-title {
+			font-size: 28px;
+			line-height: 35px;
+			font-weight: bold;
+		}
+		.details {
+			float: right;
+			font-size: 16px;
+			line-height: 35px;
 		}
 		div.columns {
 			position: relative;
@@ -27,7 +43,6 @@
 			float: left;
 			padding: 0 7px;
 		}
-
 		.jscolor {
 			width: 180px;
 			height: 40px;
@@ -59,6 +74,10 @@
 	</style>
 </head>
 <body>
+<div class="header">
+	<span class="tool-title">U.S. Map Infographic Tool</span>
+	<div class="details"><a href="https://github.com/kaldari/SVG-map-maker">Source code</a> • <a href="https://github.com/kaldari/SVG-map-maker/blob/master/CREDITS.txt">Credits</a> • <a href="https://github.com/kaldari/SVG-map-maker/issues">Report bugs</a></div>
+</div>
 <form action="mapgenerate.php" method="POST" style="text-align: center;">
 <div class="columns"">
 <div class="column" id="left">
