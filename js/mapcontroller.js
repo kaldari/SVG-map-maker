@@ -1,10 +1,22 @@
-color = "#D3D3D3";
+color = "8DD3C7";
 
 function toggleTerritories() {
 	if ( $( 'input#territories' ).prop( 'checked' ) ) {
 		$( '.territory' ).show();
+		// Add titles as a tooltip for hover
+		$( '#ASproxy' ).attr( 'title', 'American Samoa' );
+		$( '#GUproxy' ).attr( 'title', 'Guam' );
+		$( '#MPproxy' ).attr( 'title', 'Northern Mariana Islands' );
+		$( '#PRproxy' ).attr( 'title', 'Puerto Rico' );
+		$( '#VIproxy' ).attr( 'title', 'U.S. Virgin Islands' );
 	} else {
 		$( '.territory' ).hide();
+		// Remove titles as a tooltip for hover
+		$( '#ASproxy' ).removeAttr( 'title' );
+		$( '#GUproxy' ).removeAttr( 'title' );
+		$( '#MPproxy' ).removeAttr( 'title' );
+		$( '#PRproxy' ).removeAttr( 'title' );
+		$( '#VIproxy' ).removeAttr( 'title' );
 	}
 }
 
