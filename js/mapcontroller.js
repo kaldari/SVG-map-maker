@@ -1,4 +1,5 @@
 color = "8DD3C7";
+grey = "D3D3D3";
 
 function toggleTerritories() {
 	if ( $( 'input#territories' ).prop( 'checked' ) ) {
@@ -29,7 +30,6 @@ function toggleColors() {
 		$( '#color5' ).val( 'A6C760' );
 		$( '#color6' ).val( 'E2E062' );
 		$( '#color7' ).val( 'FCE77C' );
-		$( '#color8' ).val( 'D3D3D3' );
 		$( '.jscolor' ).each( function() {
 			$( this ).focus();
 			$( this ).blur();
@@ -43,7 +43,6 @@ function toggleColors() {
 		$( '#color5' ).val( '80B1D3' );
 		$( '#color6' ).val( 'FCCDE5' );
 		$( '#color7' ).val( 'FDB462' );
-		$( '#color8' ).val( 'D3D3D3' );
 		$( '.jscolor' ).each( function() {
 			$( this ).focus();
 			$( this ).blur();
@@ -54,16 +53,28 @@ function toggleColors() {
 
 function paintTerritory( territory ) {
 	if ( $( 'input#territories' ).prop( 'checked' ) ) {
-		$( '#' + territory ).attr( "fill", "#" + color );
-		$('#' + territory + 'input').val( color );
+		if ( $( '#' + territory ).attr( "fill" ) === "#" + color ) {
+			$( '#' + territory ).attr( "fill", "#" + grey );
+			$('#' + territory + 'input').val( grey );
+		} else {
+			$( '#' + territory ).attr( "fill", "#" + color );
+			$('#' + territory + 'input').val( color );
+		}
 	}
 }
 
 $(document).ready( function() {
 	toggleTerritories();
 	$( '.clickable' ).click( function() {
-		$( this ).attr( "fill", "#" + color );
-		$( '#' + this.id + 'input' ).val( color );
+		// If the shape is already colored with the selected color, switch back to grey.
+		if ( $( this ).attr( "fill" ) === "#" + color ) {
+			$( this ).attr( "fill", "#" + grey );
+			$( '#' + this.id + 'input' ).val( grey );
+		// Otherwise, fill it with the selected color.
+		} else {
+			$( this ).attr( "fill", "#" + color );
+			$( '#' + this.id + 'input' ).val( color );
+		}
 	} );
 	// Set up click proxies for territories (since they're hard to click on)
 	$( '#ASproxy' ).click( function() { paintTerritory( 'AS' ); } );
