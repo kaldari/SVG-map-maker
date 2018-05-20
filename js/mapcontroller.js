@@ -65,6 +65,11 @@ function paintTerritory( territory ) {
 
 $(document).ready( function() {
 	toggleTerritories();
+	// Firefox doesn't reset inputs on refresh
+	if ( $( '#color1' ).val() === '15534C' ) {
+		$( '#switcher' ).text( 'Switch to assortment' );
+	}
+	// Activate click functionality for states
 	$( '.clickable' ).click( function() {
 		// If the shape is already colored with the selected color, switch back to grey.
 		if ( $( this ).attr( "fill" ) === "#" + color ) {
