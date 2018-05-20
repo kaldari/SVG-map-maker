@@ -65,6 +65,7 @@ function paintTerritory( territory ) {
 
 $(document).ready( function() {
 	toggleTerritories();
+	toggleColors();
 	$( '.clickable' ).click( function() {
 		// If the shape is already colored with the selected color, switch back to grey.
 		if ( $( this ).attr( "fill" ) === "#" + color ) {
