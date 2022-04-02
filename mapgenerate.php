@@ -9,8 +9,10 @@ if ( isset( $_POST["territories"] ) && $_POST["territories"] ) {
 	$map = file_get_contents( "Blank USA states only.svg" );
 }
 if ( $map ) {
-	foreach( $_POST["states"] as $state => $fill ) {
-		$map = str_replace( 'id="' . $state . '" fill="#D3D3D3"', 'id="' . $state . '" fill="#' . strtoupper( $fill ) . '"', $map );
+	if ( isset( $_POST["states"] ) && $_POST["states"] ) {
+		foreach( $_POST["states"] as $state => $fill ) {
+			$map = str_replace( 'id="' . $state . '" fill="#D3D3D3"', 'id="' . $state . '" fill="#' . strtoupper( $fill ) . '"', $map );
+		}
 	}
 } else {
 	echo "Error: Could not open template file.";
